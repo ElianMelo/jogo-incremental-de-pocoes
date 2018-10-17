@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+}
+
+.telaPrincipal {
+    position: relative;
+    float: left;
+    border-width: 2px;
+    border-style: solid;
+    width: 62%;
+    height: 95%;
+    text-align: center;
+}
+
+.telaSecundaria {
+    position: relative;
+    float: left;
+    border-width: 2px;
+    border-style: solid;
+    width: 36%;
+    height: 95%;
+}
