@@ -8,27 +8,27 @@ Objetivo: Fazer um jogo incremental simples com upgrades passivos
         <link rel="stylesheet" type="text/css" href="estilos.css"/>
         <script type="text/javascript" src="script.js"></script>
     </head>
-    <body>
+    <body onload="inicioJogo();">
         <div id="telaPrincipal" class="borda">
             <div id="telaObjeto">
-                <img src="img\pocao.png" alt="Poção" onclick="funcaoPontos();">
+                <img id="objeto" src="img\pocao.png" alt="Poção" onclick="funcaoPontos();">
             </div>
-            <table>
-                <tr>
-                    <td id="cronometro">00:00:00</td>
-                    <td id="pontos">Pontos: 0</td>
+            <table class="borda">
+                <tr class="borda">
+                    <td id="cronometro" class="borda">00:00:00</td>
+                    <td id="pontos" class="borda">Pontos: 0</td>
                 </tr>
             </table>
         </div>
         <div id="telaSecundaria" class="borda">
             <div class="upgrade borda">
-                <img src="img\upgrade.png" alt="Upgrade" onclick="">
+                <img id="upgrade1" class="upgradeImagem" src="img\upgrade.png" alt="Upgrade" onclick="comprarUpgrade1();">
             </div>
             <div class="upgrade borda">
-                <img src="img\upgrade.png" alt="Upgrade" onclick="">
+                <img id="upgrade2" class="upgradeImagem" src="img\upgrade.png" alt="Upgrade" onclick="comprarUpgrade2();">
             </div>
             <div class="upgrade borda">
-                <img src="img\upgrade.png" alt="Upgrade" onclick="">
+                <img id="upgrade3" class="upgradeImagem" src="img\upgrade.png" alt="Upgrade" onclick="comprarUpgrade3();">
             </div>
         </div>
     </body>

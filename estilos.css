@@ -13,8 +13,8 @@ p {
 img {
     display: block;
     margin: auto;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
+    width: auto;
+    height: auto;
 }
 
 table, tr, td {
@@ -35,6 +35,14 @@ table, tr, td {
 #telaObjeto {
     width: auto;
     height: 85%;
+}
+
+#objeto {
+    padding-top: 10%;
+}
+
+#objeto:hover{
+    height: 70%;
 }
 
 #telaPontos {
@@ -66,10 +74,19 @@ table, tr, td {
 .upgrade {
     display: block;
     width: auto;
-    height: 32.66%;
+    height: 33%;
+}
+
+.upgradeImagem {
+    display: block;
+    margin: auto;
+    opacity: 0.5;
+    margin-top: 2%;
+    width: 200px;
+    height: 180px;
 }
 
 .borda {
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
 }
