@@ -1,6 +1,6 @@
-var click = 0;
+var pontos = 0;
 
-function funcaoClick() {
-    click += 1;
-    document.getElementById("score").innerHTML = "Score: " + click;
+function funcaoPontos() {
+    pontos += 1;
+    document.getElementById("pontos").innerHTML = "Pontos: " + pontos;
 }

@@ -1,8 +1,6 @@
 <!--
 Autor: Elian Melo Morais
-
 Data de Criação: 16/10/2018
-
 Objetivo: Fazer um jogo incremental simples com upgrades passivos
 -->
 <html>
@@ -11,16 +9,26 @@ Objetivo: Fazer um jogo incremental simples com upgrades passivos
         <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
-        <div class="telaPrincipal">
-            <img src="img\pocao.png" alt="Poção" height="200" width="200" onclick="funcaoClick();">
-            <p id="score">Score: 0</p>
+        <div id="telaPrincipal" class="borda">
+            <div id="telaObjeto">
+                <img src="img\pocao.png" alt="Poção" onclick="funcaoPontos();">
+            </div>
+            <table>
+                <tr>
+                    <td id="cronometro">00:00:00</td>
+                    <td id="pontos">Pontos: 0</td>
+                </tr>
+            </table>
         </div>
-        <div class="telaSecundaria">
-            <div>Upgrade 1
+        <div id="telaSecundaria" class="borda">
+            <div class="upgrade borda">
+                <img src="img\upgrade.png" alt="Upgrade" onclick="">
             </div>
-            <div>Upgrade 2
+            <div class="upgrade borda">
+                <img src="img\upgrade.png" alt="Upgrade" onclick="">
             </div>
-            <div>Upgrade 3
+            <div class="upgrade borda">
+                <img src="img\upgrade.png" alt="Upgrade" onclick="">
             </div>
         </div>
     </body>
