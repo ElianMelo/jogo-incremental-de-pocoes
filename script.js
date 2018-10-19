@@ -51,6 +51,8 @@ function funcaoCronometro() {
 //Clique do mouse
 function funcaoPontos() {
     pontos += 20;
+    document.getElementById("personagem").src = "img\\mago-feliz.png";
+    setTimeout(function(){ document.getElementById("personagem").src = "img\\mago.png"; }, 1000);
     document.getElementById("pontos").innerHTML = "Pontos: " + pontos;
 }
 
@@ -73,17 +75,17 @@ function funcaoUpgrade3(){
 //Verificação
 function funcaoVerificacao() {
     if((pontos >= 20) && (upgrades[0] === false)){
-        document.getElementById("upgrade1").style.opacity = "1";
+        document.getElementById("upgrade1").src = "img\\upgrade.png";
         upgrades[0] = true;
         setInterval(funcaoUpgrade1, 20000);
     }
     if((pontos >= 250) && (upgrades[1] === false)){
-        document.getElementById("upgrade2").style.opacity = "1";
+        document.getElementById("upgrade2").src = "img\\upgrade.png";
         upgrades[1] = true;
         setInterval(funcaoUpgrade2, 1000);
     }
     if((pontos >= 500) && (upgrades[2] === false)){
-        document.getElementById("upgrade3").style.opacity = "1";
+        document.getElementById("upgrade3").src = "img\\upgrade.png";
         upgrades[2] = true;
         setInterval(funcaoUpgrade3, 10000);
     }

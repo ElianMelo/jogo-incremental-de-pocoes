@@ -11,7 +11,6 @@ p {
 }
 
 img {
-    display: block;
     margin: auto;
     width: auto;
     height: auto;
@@ -41,8 +40,9 @@ table, tr, td {
     padding-top: 10%;
 }
 
-#objeto:hover{
-    height: 70%;
+#personagem {
+    height: 250px;
+    width: 200px;
 }
 
 #telaPontos {
@@ -80,7 +80,6 @@ table, tr, td {
 .upgradeImagem {
     display: block;
     margin: auto;
-    opacity: 0.5;
     margin-top: 2%;
     width: 200px;
     height: 180px;
