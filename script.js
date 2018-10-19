@@ -7,27 +7,44 @@ var upgrades = [false, false, false];
 //Início do Jogo
 function inicioJogo(){
     setInterval(funcaoCronometro, 1000);
+    setInterval(funcaoVerificacao, 100);
 }
 
 //Cronometro
 function funcaoCronometro() {
+    var strSegundos, strMinutos, strHoras;
+
     segundos += 1;
 
-    if(pontos >= 20){
-        document.getElementById("upgrade1").style.opacity = "1";
+    if(segundos >= 60){
+        segundos = 0;
+        minutos += 1;
     }
-    if(pontos >= 250){
-        document.getElementById("upgrade2").style.opacity = "1";
-    }
-    if(pontos >= 500){
-        document.getElementById("upgrade3").style.opacity = "1";
+
+    if(minutos >= 60){
+        minutos = 0;
+        horas += 1;
     }
 
     if(segundos < 10){
-        document.getElementById("cronometro").innerHTML = "00:00:0" + segundos;
+        strSegundos = "0" + segundos;
     }else{
-        document.getElementById("cronometro").innerHTML = "00:00:" + segundos;
+        strSegundos = segundos;
     }
+
+    if(minutos < 10){
+        strMinutos = "0" + minutos;
+    }else{
+        strMinutos = minutos;
+    }
+
+    if(horas < 10){
+        strHoras = "0" + horas;
+    }else{
+        strHoras = horas;
+    }
+
+    document.getElementById("cronometro").innerHTML = strHoras + ":" + strMinutos + ":" + strSegundos;
 
 }
 
@@ -38,36 +55,35 @@ function funcaoPontos() {
 }
 
 //Upgrades
-function funcaoUpgrade1(verificacao){
+function funcaoUpgrade1(){
     pontos += 1;
     document.getElementById("pontos").innerHTML = "Pontos: " + pontos;
 }
 
-function funcaoUpgrade2(verificacao){
+function funcaoUpgrade2(){
     pontos += 1;
     document.getElementById("pontos").innerHTML = "Pontos: " + pontos;
 }
 
-function funcaoUpgrade3(verificacao){
+function funcaoUpgrade3(){
     pontos += 5;
     document.getElementById("pontos").innerHTML = "Pontos: " + pontos;
 }
 
-//Comprar Upgrades
-function comprarUpgrade1(){
-    if((document.getElementById("upgrade1").style.opacity === "1") && (upgrades[0] === false)){
+//Verificação
+function funcaoVerificacao() {
+    if((pontos >= 20) && (upgrades[0] === false)){
+        document.getElementById("upgrade1").style.opacity = "1";
         upgrades[0] = true;
         setInterval(funcaoUpgrade1, 20000);
     }
-}
-function comprarUpgrade2(){
-    if((document.getElementById("upgrade2").style.opacity === "1") && (upgrades[1] === false)){
+    if((pontos >= 250) && (upgrades[1] === false)){
+        document.getElementById("upgrade2").style.opacity = "1";
         upgrades[1] = true;
         setInterval(funcaoUpgrade2, 1000);
     }
-}
-function comprarUpgrade3(){
-    if((document.getElementById("upgrade3").style.opacity === "1") && (upgrades[2] === false)){
+    if((pontos >= 500) && (upgrades[2] === false)){
+        document.getElementById("upgrade3").style.opacity = "1";
         upgrades[2] = true;
         setInterval(funcaoUpgrade3, 10000);
     }
