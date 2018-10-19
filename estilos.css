@@ -1,8 +1,15 @@
+@font-face {
+    font-family: LifeCraft;
+    src: url("fonte\\LifeCraft.ttf");
+}
+
+
 html, body{
     height: 98%;
     width: 98%;
     text-align: center;
     vertical-align: middle;
+    font-family: LifeCraft;
 }
 
 p {
@@ -81,11 +88,11 @@ table, tr, td {
     display: block;
     margin: auto;
     margin-top: 2%;
-    width: 200px;
-    height: 180px;
+    width: 300px;
+    height: 150px;
 }
 
 .borda {
-    border-width: 1px;
-    border-style: solid;
+    /*border-width: 1px;
+    border-style: solid;*/
 }

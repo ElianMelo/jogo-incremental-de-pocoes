@@ -10,7 +10,7 @@ function inicioJogo(){
     setInterval(funcaoVerificacao, 100);
 }
 
-//Cronometro
+//Cronometro no formato horas:minutos:segundos
 function funcaoCronometro() {
     var strSegundos, strMinutos, strHoras;
 
@@ -48,7 +48,7 @@ function funcaoCronometro() {
 
 }
 
-//Clique do mouse
+//Clique do mouse e interação com o personagem
 function funcaoPontos() {
     pontos += 20;
     document.getElementById("personagem").src = "img\\mago-feliz.png";
@@ -56,7 +56,7 @@ function funcaoPontos() {
     document.getElementById("pontos").innerHTML = "Pontos: " + pontos;
 }
 
-//Upgrades
+//Upgrades e sua somatória de pontos
 function funcaoUpgrade1(){
     pontos += 1;
     document.getElementById("pontos").innerHTML = "Pontos: " + pontos;
@@ -72,7 +72,7 @@ function funcaoUpgrade3(){
     document.getElementById("pontos").innerHTML = "Pontos: " + pontos;
 }
 
-//Verificação
+//Verificação constante se os upgrades estão ativos
 function funcaoVerificacao() {
     if((pontos >= 20) && (upgrades[0] === false)){
         document.getElementById("upgrade1").src = "img\\upgrade.png";
@@ -90,3 +90,6 @@ function funcaoVerificacao() {
         setInterval(funcaoUpgrade3, 10000);
     }
 }
+
+//Verifica a mudança de pontos por segundo
+//setInterval(function a(){console.log(pontos);}, 1000);
