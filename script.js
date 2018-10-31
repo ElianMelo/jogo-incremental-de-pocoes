@@ -50,7 +50,7 @@ function funcaoCronometro() {
 
 //Clique do mouse e interação com o personagem
 function funcaoPontos() {
-    pontos += 1;
+    pontos += 30;
     document.getElementById("personagem").src = "img\\mago-acao.png";
     setTimeout(function(){ document.getElementById("personagem").src = "img\\mago.png"; }, 1000);
     document.getElementById("pontos").innerHTML = "Pontos: " + pontos;
