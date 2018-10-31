@@ -7,10 +7,10 @@
 html, body{
     background-image: url("img\\background.jpg");
     background-repeat: no-repeat;
-    background-size: 103%;
+    background-size: cover;
     color: #FFFFFF;
-    height: 98%;
-    width: 98%;
+    height: auto;
+    width: auto;
     text-align: center;
     vertical-align: middle;
     font-family: LifeCraft;
@@ -49,17 +49,14 @@ table, tr, td {
 #telaObjeto {
     width: auto;
     height: 85%;
+    display: inline-flex;
 }
 
 #objeto {
-    padding-top: 25%;
-    width: 250px;
-    height: 250px;
+    padding-top: 10%;
 }
 
 #personagem {
-    height: 300px;
-    width: 300px;
 }
 
 #telaPontos {

@@ -9,9 +9,14 @@ Objetivo: Fazer um jogo incremental simples com upgrades passivos
         <script type="text/javascript" src="script.js"></script>
     </head>
     <body onload="inicioJogo();">
+        <audio id="meuAudio">
+          <source src="som\som.ogg" type="audio/ogg">
+          <source src="som\som.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
         <div id="telaPrincipal" class="borda">
             <div id="telaObjeto">
-                <img id="objeto" src="img\pocao.png" alt="Poção" onclick="funcaoPontos();">
+                <img id="objeto" src="img\pocao.png" alt="Poção" onclick="funcaoPontos(); tocarAudio();">
                 <img id="personagem" src="img\mago.png" alt="Mago">
             </div>
             <table class="borda">

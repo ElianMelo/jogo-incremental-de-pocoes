@@ -50,10 +50,17 @@ function funcaoCronometro() {
 
 //Clique do mouse e interação com o personagem
 function funcaoPontos() {
-    pontos += 30;
+    pontos += 1;
     document.getElementById("personagem").src = "img\\mago-acao.png";
     setTimeout(function(){ document.getElementById("personagem").src = "img\\mago.png"; }, 1000);
     document.getElementById("pontos").innerHTML = "Pontos: " + pontos;
+}
+
+//Som ao clicar com o mouse
+function tocarAudio() {
+    var audio = document.getElementById("meuAudio");
+    audio.load();
+    audio.play();
 }
 
 //Upgrades e sua somatória de pontos
